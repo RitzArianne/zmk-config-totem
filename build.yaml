@@ -5,6 +5,6 @@ include:
 #  - board: seeeduino_xiao_ble
   - board: xiao_ble//zmk
     shield: totem_right
-  - board: xioa_ble//zmk
+  - board: xiao_ble//zmk
     shiled: settings_reset
 # there is no settingsreset (needed) for the XIAO
