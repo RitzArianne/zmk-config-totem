@@ -107,9 +107,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                          &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J    &kp L           &kp U           &kp Y            &kp SEMI
+                                          &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J    &kp L           &kp U           &kp Z            &kp LEFT_BRACKET
                                           &home_l LSHFT A  &home_r LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H    &home_r RGUI N  &home_r RALT E  &home_r RCTRL I  &home_r RSHIFT O
-&lt 3 C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp Z            &kp X            &kp C           &kp V           &kp B        &kp K    &kp M           &kp COMMA       &kp DOT          &kp FSLH          &kp BSLH
+&lt 3 C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp Y            &kp X            &kp C           &kp V           &kp B        &kp K    &kp M           &kp COMMA       &kp DOT          &kp SEMICOLON     &kp SQT
                                                                             &kp DEL         &lt 1 TAB       &kp SPACE    &kp RET  &lt 2 ESC       &kp BSPC
             >;
         };
@@ -159,10 +159,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo 3        &trans        &trans          &kp C_PP
+        &trans        &trans           &trans      &trans    &trans        &trans  &trans  &trans  &kp EQUAL  &kp RIGHT_BRACKET
+        &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PREV  &kp C_PP  &kp C_NEXT    &trans  &trans  &trans  &trans     &kp NON_US_BACKSLASH
+&trans  &trans        &trans           &trans      &trans    &trans        &trans  &trans  &trans  &kp SLASH  &trans                &trans
+                                       &trans      &trans    &mo 3         &trans  &trans  &trans
             >;
         };
 
