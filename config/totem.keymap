@@ -106,14 +106,15 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                   &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J      &kp L           &kp U           &kp Z            &kp EXCLAMATION
-                   &home_l LSHFT A  &home_r LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H      &home_r RGUI N  &home_r RALT E  &home_r RCTRL I  &home_r RSHIFT O
-&kp LC(LESS_THAN)  &kp Y            &kp X            &kp C           &kp V           &kp B        &kp K      &kp M           &kp COMMA       &kp DOT          &kp MINUS         &kp SLASH
-                                                     &kp ESCAPE      &lt 1 TAB       &kp SPACE    &kp SPACE  &lt 2 DEL       &kp ENTER
+                   &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J      &kp L            &kp U           &kp Z            &kp EXCLAMATION
+                   &home_l LSHFT A  &home_r LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H      &home_r RGUI N   &home_r RALT E  &home_r RCTRL I  &home_r RSHIFT O
+&kp LC(LESS_THAN)  &kp Y            &kp X            &kp C           &kp V           &kp B        &kp K      &kp M            &kp COMMA       &kp DOT          &kp MINUS         &kp SLASH
+                                                     &kp ESCAPE      &lt 1 TAB       &kp SPACE    &kp SPACE  &lt 2 BACKSPACE  &kp ENTER
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
