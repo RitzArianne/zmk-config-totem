@@ -82,6 +82,60 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <4 14 25 34 33 32 24 13 3 2 23 12 1 11 22 0 10 21 20>;
         };
+
+        ch_comma_semi: ch_comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_COMMA_SEMI";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        ch_comma_semi_less: ch_comma_semi_less {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_COMMA_SEMI_LESS";
+            bindings = <&ch_comma_semi>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT|MOD_RCTL|MOD_LALT|MOD_LCTL)>;
+        };
+
+        ch_periode_colon: ch_periode_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_PERIODE_COLON";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ch_periode_colon_greater: ch_periode_colon_greater {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_PERIODE_COLON_GREATER";
+            bindings = <&ch_periode_colon>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_LCTL|MOD_RALT|MOD_RCTL)>;
+        };
+
+        ch_hyphon_under: ch_hyphon_under {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_HYPHON_UNDER";
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ch_hyphon_under_tilde: ch_hyphon_under_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_HYPHON_UNDER_TILDE";
+            bindings = <&ch_hyphon_under>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT|MOD_RCTL|MOD_LALT|MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -106,9 +160,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J      &kp L            &kp U           &kp Y            &kp EXCLAMATION
-               &home_l LSHFT A  &home_r LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H      &home_r RGUI N   &home_r RALT E  &home_r RCTRL I  &home_r RSHIFT O
-&kp SEMICOLON  &kp Z            &kp X            &kp C           &kp V           &kp B        &kp K      &kp M            &kp COMMA       &kp DOT          &kp MINUS         &kp SLASH
+               &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J      &kp L            &kp U                &kp Y                      &kp EXCLAMATION
+               &home_l LSHFT A  &home_l LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H      &home_r RGUI N   &home_r RALT E       &home_r RCTRL I            &home_r RSHIFT O
+&kp SEMICOLON  &kp Z            &kp X            &kp C           &kp V           &kp B        &kp K      &kp M            &ch_comma_semi_less  &ch_periode_colon_greater  &ch_hyphon_under_tilde  &kp SLASH
                                                  &kp ESCAPE      &lt 1 TAB       &kp SPACE    &kp SPACE  &lt 2 BACKSPACE  &kp ENTER
             >;
         };
