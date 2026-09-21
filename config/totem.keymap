@@ -98,7 +98,7 @@
             bindings = <&ch_comma_semi>, <&kp LESS_THAN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT|MOD_RCTL|MOD_LALT|MOD_LCTL)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
 
         ch_periode_colon: ch_periode_colon {
@@ -116,7 +116,7 @@
             bindings = <&ch_periode_colon>, <&kp GREATER_THAN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_LCTL|MOD_RALT|MOD_RCTL)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
 
         ch_hyphon_under: ch_hyphon_under {
@@ -134,7 +134,70 @@
             bindings = <&ch_hyphon_under>, <&kp TILDE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT|MOD_RCTL|MOD_LALT|MOD_LCTL)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
+        };
+
+        ch_slash_backslash: ch_slash_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_SLASH_BACKSLASH";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ch_slash_backslash_pipe: ch_slash_backslash_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_SLASH_BACKSLASH_PIPE";
+            bindings = <&ch_slash_backslash>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        ch_quote_dquote: ch_quote_dquote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_QUOTE_DQUOTE";
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ch_quote_dquote_grave: ch_quote_dquote_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_QUOTE_DQUOTE_GRAVE";
+            bindings = <&ch_quote_dquote>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        ch_quote_dquote_grave_caret: ch_quote_dquote_grave_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_QUOTE_DQUOTE_GRAVE_CARET";
+            bindings = <&ch_quote_dquote_grave>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        ch_dollar_excl: ch_dollar_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_DOLLAR_EXCL";
+            bindings = <&kp DOLLAR>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ch_dollar_excl_question: ch_dollar_excl_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CH_DOLLAR_EXCL_QUESTION";
+            bindings = <&ch_dollar_excl>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
     };
 
@@ -160,10 +223,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J      &kp L            &kp U                &kp Y                      &kp EXCLAMATION
-               &home_l LSHFT A  &home_l LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H      &home_r RGUI N   &home_r RALT E       &home_r RCTRL I            &home_r RSHIFT O
-&kp SEMICOLON  &kp Z            &kp X            &kp C           &kp V           &kp B        &kp K      &kp M            &ch_comma_semi_less  &ch_periode_colon_greater  &ch_hyphon_under_tilde  &kp SLASH
-                                                 &kp ESCAPE      &lt 1 TAB       &kp SPACE    &kp SPACE  &lt 2 BACKSPACE  &kp ENTER
+                          &kp Q            &kp W            &kp F           &kp P           &kp G        &kp J      &kp L           &kp U                &kp Y                      &ch_quote_dquote_grave_caret
+                          &home_l LSHFT A  &home_l LCTRL R  &home_l LALT S  &home_l LGUI T  &kp D        &kp H      &home_r RGUI N  &home_r RALT E       &home_r RCTRL I            &home_r RSHIFT O
+&ch_dollar_excl_question  &kp Z            &kp X            &kp C           &kp V           &kp B        &kp K      &kp M           &ch_comma_semi_less  &ch_periode_colon_greater  &ch_hyphon_under_tilde        &ch_slash_backslash_pipe
+                                                            &kp TAB         &lt 1 ESCAPE    &kp SPACE    &kp SPACE  &lt 2 ENTER     &kp BACKSPACE
             >;
         };
 
